@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-rows:3fr 5fr 2fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'slider'
+    '.'
+    '.'
+    ;
+}
+/*top nav*/
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    background-color: darkgray;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 4fr 1fr 1fr ;
+    grid-template-areas:
+    '. navmenu signbtn userbtns' 
+    ;
+}
+/*top nav menue*/
+#navmenue{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    grid-area: navmenu;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+#navmenue ul {
+    list-style: none;
+}
+#navmenue ul li{
+    float: right;
+    margin-right: 30px;
+}
+#navmenue ul li a{
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s ease color;
+}
+#navmenue ul li a:hover{
+    color: rgb(80, 58, 58);
+}
+/*sign-in btn*/
+#signupbtn{
+    font-size: 18px;
+    background-color: transparent;
+    outline: none;
+    height: 50%;
+    width: 70%;
+    margin: auto 0;
+    border: 1px solid transparent;
+    transition: 0.3s ease-in-out border;
+    cursor: pointer;
+    grid-area: signbtn;
+}
+#signupbtn:hover{
+    border: 1px solid #000;
+
+} 
+/*End of the nav(user options)*/
+.endbar{
+    grid-area: userbtns;
+    margin: auto 0;
+}
+.endbar a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: 0.3s ease color;
+}
+.endbar a:hover{
+    color: rgb(80, 58, 58);
+}
+/*navbar logo*/
+.logobox{
+    position: fixed;
+    top: 0;
+    right: 15%;
+    z-index: 5;
+    width: 110px;
+    height: 120px;
+    background-color:#000;
+    background-image: url(logo/white-logo.png);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+/*banner slider*/
+.slidebox{
+    grid-area: slider;
+    width: 100%;
+    height: 90vh;
+    margin-top: 4%;
+    position: relative;
+}
+.slides{
+    height: 100%;
+    width: 100%;
+}
+/*banners properties*/
+.slideitem{
+    background-color: rgb(92, 83, 83);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: 100%;
+    height: 100%;
+    display: none;
+    color: #fff;
+    position: relative;
+}
+.slideitem h1{
+    position: absolute;
+    right: 5%;
+    bottom: 60%;
+    font-size: 50px;
+}
+.slideitem p{
+    position: absolute;
+    right: 5%;
+    bottom: 40%;
+    font-size: 28px;
+    width: 700px;
+}
+.slideitem a{
+    position: absolute;
+    right: 20%;
+    bottom: 25%;
+    font-size: 20px;
+    padding:10px 50px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f00;
+    border: 2px solid #f00;
+    transition: 0.3s ease-in-out background-color;
+}
+.slideitem a:hover{
+    background-color: rgba(255, 0, 0, 0.795);
+}
+/*slides backgrounds*/
+.slideitem:nth-child(1){
+    background-image: url(img/1.jpg);
+}
+.slideitem:nth-child(2){
+    background-image: url(img/2.jpg);
+}
+.slideitem:nth-child(3){
+    background-image: url(img/3.jpg);
+}
+/*display class*/
+.show{
+    display: block;
+}
+/*dots of slider*/
+.dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dots span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5%;
+    background-color: rgb(100, 88, 88);
+    cursor: pointer;
+}
+.dots span:nth-child(1){
+    margin-left: 0px;
+}
+.dots span:nth-child(2){
+    margin-left: 5%;
+}
+.dots span:nth-child(3){
+    margin-left: 10%;
+    background-color: rgb(15, 15, 15);
+}
