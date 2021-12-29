@@ -5,10 +5,12 @@
 }
 body{
     display: grid;
-    grid-template-rows:3fr 5fr 2fr;
+    grid-template-rows:1.5fr 0.5fr 1.1fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-areas:
     'slider'
+    'main'
+    'cardspart'
     '.'
     '.'
     ;
@@ -105,7 +107,7 @@ body{
 .slidebox{
     grid-area: slider;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     margin-top: 4%;
     position: relative;
 }
@@ -119,11 +121,14 @@ body{
     background-blend-mode: multiply;
     background-position: center;
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 100%;
     display: none;
     color: #fff;
     position: relative;
+    animation: switchslide 0.3s ease-in-out ;
 }
+
 .slideitem h1{
     position: absolute;
     right: 5%;
@@ -163,7 +168,7 @@ body{
     background-image: url(img/3.jpg);
 }
 /*display class*/
-.show{
+.slideitem.active{
     display: block;
 }
 /*dots of slider*/
@@ -173,13 +178,16 @@ body{
     align-items: center;
 }
 .dots span{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     position: absolute;
     bottom: 5%;
     background-color: rgb(100, 88, 88);
     cursor: pointer;
+}
+.dots span.active{
+    background-color:#f00;
 }
 .dots span:nth-child(1){
     margin-left: 0px;
@@ -189,5 +197,165 @@ body{
 }
 .dots span:nth-child(3){
     margin-left: 10%;
-    background-color: rgb(15, 15, 15);
+}
+/*Set an animation to slider*/
+@keyframes switchslide {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+/*main of the page*/
+.main{
+    grid-area: main;
+    width:100%;
+    height: 65vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'title'
+    'boxes'
+    ;
+    background-color: rgb(217 ,202 ,202);
+
+}
+/*info title setting*/
+.titleof{
+    grid-area: title;
+    margin: 10px auto;
+}
+.iconbox{
+    height: 80px;
+    width: 80px;
+    background-color: transparent;
+    background-image: url(logo/icon.png);
+    background-position: center;
+    background-size: 100%;
+}
+.boxes{
+    grid-area:boxes;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.box{
+    height: 350px;
+    width: 250px;
+    margin: 0 30px;
+    display: grid;
+    grid-template-rows: 4fr 1fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'imgbox'
+    'ttl'
+    'paraf'
+    ;
+}
+/*boxes properties*/
+.boximg{
+    grid-area: imgbox;
+    margin: 20px auto;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-position:center ;
+    background-size: cover;
+}
+.box:nth-child(1) .boximg{
+    background-image: url(img/1.jpg);
+}
+.box:nth-child(2) .boximg{
+    background-image: url(img/2.jpg);
+}
+.box:nth-child(3) .boximg{
+    background-image: url(img/5.jpg);
+}
+.box h3 {
+    grid-area: ttl;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.box p {
+    grid-area: paraf;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+}
+/*bottom part of the main (shop cards)*/
+.shopcards{
+    grid-area:cardspart;
+    width: 100%;
+    height: 74vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.card{
+    width: 300px;
+    height: 400px;
+    border: 1px solid transparent;
+    margin: auto 60px;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'icon'
+    'cardttl'
+    'cardbtn'
+    ;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+}
+.card:hover{
+    width: 320px;
+    height: 420px;
+    background-color: #eee;
+    /*border: 1px solid rgba(150, 146, 146, 0.877);*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.cardicon{
+    grid-area: icon;
+    height: 150px;
+    width: 120px;
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+.card:nth-child(1) .cardicon{
+    background-image: url(img/coffee-bag.png);
+}
+.card:nth-child(2) .cardicon{
+    background-image: url(img/coffee-maker.png);
+}
+.card:nth-child(3) .cardicon{
+    background-image: url(img/coffee-cup.png);
+}
+.card h2{
+    grid-area: cardttl;
+    margin: auto;
+}
+.card a{
+    grid-area: cardbtn;
+    margin: 20px auto;
+    height: 45px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f00;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.card a:hover{
+     background-color:rgba(255, 0, 0, 0.795);
+
 }
