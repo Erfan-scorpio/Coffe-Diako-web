@@ -4,16 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    display: grid;
-    grid-template-rows:1.5fr 0.5fr 1.1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    'slider'
-    'main'
-    'cardspart'
-    '.'
-    '.'
-    ;
+    display: flex;
+    flex-direction: column;
 }
 /*top nav*/
 .navbar{
@@ -97,6 +89,7 @@ body{
     z-index: 5;
     width: 110px;
     height: 120px;
+    border: 2px solid #fff;
     background-color:#000;
     background-image: url(logo/white-logo.png);
     background-position: center;
@@ -105,9 +98,8 @@ body{
 }
 /*banner slider*/
 .slidebox{
-    grid-area: slider;
     width: 100%;
-    height: 95vh;
+    height: 80vh;
     margin-top: 4%;
     position: relative;
 }
@@ -176,6 +168,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 5%;
 }
 .dots span{
     width: 20px;
@@ -205,7 +198,6 @@ body{
 }
 /*main of the page*/
 .main{
-    grid-area: main;
     width:100%;
     height: 65vh;
     margin: 0 auto;
@@ -222,7 +214,10 @@ body{
 /*info title setting*/
 .titleof{
     grid-area: title;
-    margin: 10px auto;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .iconbox{
     height: 80px;
@@ -231,6 +226,10 @@ body{
     background-image: url(logo/icon.png);
     background-position: center;
     background-size: 100%;
+}
+.titleh2{
+    padding-top: 10px;
+    font-size: 25px
 }
 .boxes{
     grid-area:boxes;
@@ -285,9 +284,8 @@ body{
 }
 /*bottom part of the main (shop cards)*/
 .shopcards{
-    grid-area:cardspart;
     width: 100%;
-    height: 74vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -308,7 +306,7 @@ body{
     'cardbtn'
     ;
     text-align: center;
-    cursor: pointer;
+    cursor: normal;
     transition: 0.3s ease-in-out all;
 }
 .card:hover{
@@ -339,6 +337,7 @@ body{
 .card h2{
     grid-area: cardttl;
     margin: auto;
+    cursor:default;
 }
 .card a{
     grid-area: cardbtn;
@@ -357,5 +356,62 @@ body{
 }
 .card a:hover{
      background-color:rgba(255, 0, 0, 0.795);
+}
+/*Subscription part*/
+.subscription{
+    background-color: rgb(0 0 0 / 30%);
+    height: 50vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas: 
+    'sttle'
+    'sparaph'
+    'sbtn'
+    ;
+}
+#subctitle{
+    grid-area: sttle;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscription p {
+    grid-area: sparaph;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 600px;
+    line-height: 35px;
+    text-align: center;
 
+}
+.subscription a{
+    grid-area: sbtn;
+    margin:auto;
+    padding: 10px 40px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+/*footer part*/
+.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(0 0 0 / 60%);
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.footer .logobox{
+    position:absolute;
+    border: none;
+    width: 90px;
+    height: 100px;
 }
