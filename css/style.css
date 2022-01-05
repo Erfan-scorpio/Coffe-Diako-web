@@ -100,11 +100,11 @@ body{
     z-index: 5;
     width: 110px;
     height: 120px;
-    border: 2px solid #fff;
-    background-color:#000;
-    background-image: url(logo/white-logo.png);
+    border: 2px solid #000;
+    background-color:#fff;
+    background-image: url(logo/2.png);
     background-position: center;
-    background-size: 90%;
+    background-size: 200%;
     background-repeat: no-repeat;
 }
 /*banner slider*/
