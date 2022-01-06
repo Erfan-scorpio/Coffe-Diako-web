@@ -1,0 +1,283 @@
+/*laptop*/
+@media screen and (width:1024px){
+    /*Slider-dots*/
+    .dots{
+        margin-right: 6%;
+    }
+    .dots span{
+        width: 18px;
+        height: 18px;
+    }
+    .dots span:nth-child(1){
+        margin-left: 0px;
+    }
+    .dots span:nth-child(2){
+        margin-left: 6%;
+    }
+    .dots span:nth-child(3){
+        margin-left: 12%;
+    }
+    /*Footer*/
+    .contactus , .address , .sitemap{
+        margin-top: 7%;
+        margin-left: 11%;
+    }
+    .logobox {
+        right: 7%;
+    }
+}
+
+/*for small screen devices*/
+@media screen and (max-width:899px){
+    /*navigation bar*/
+    #navmenue{
+        width: 500px;
+    }
+    #navmenue ul li{
+        margin-right: 40px;
+    }
+    #navmenue ul li a{
+        font-size: 15px;
+    }
+    #signupbtn{
+        font-size: 15px;
+        height: 65%;
+        width: 95%;
+    }
+    .endbar a {
+        font-size: 14px;
+    }
+    .logobox{
+        position: fixed;
+        top: 0;
+        right: 10%;
+        z-index: 5;
+        width: 90px;
+        height: 100px;
+    }
+    /*slider*/
+    .slideitem h1{
+        font-size: 40px;
+    }
+    .slideitem p{
+        font-size: 20px;
+        width: 500px;
+    }
+    .slideitem a{
+        font-size: 18px;
+        padding: 5px 35px;
+    }
+    .dots{
+        margin-right: 6%;
+    }
+    .dots span{
+        width: 15px;
+        height: 15px;
+    }
+    .dots span:nth-child(1){
+        margin-left: 0px;
+    }
+    .dots span:nth-child(2){
+        margin-left: 6%;
+    }
+    .dots span:nth-child(3){
+        margin-left: 12%;
+    }
+    /*main part*/
+    .main{
+        height: 90vh;
+    }
+    .titleof{
+        margin:5px auto;
+    }
+    .iconbox{
+        width: 65px;
+        height: 65px;
+    }
+    .titleh2{
+        font-size: 20px;
+        padding-top: 2px;
+    }
+    .box{
+        height: 200px;
+        width: 200px;
+        margin: 0 20px;
+    }
+    .box h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .box p {
+        font-size: 15px;
+        margin-top:0;
+        font-weight: bold;
+    }
+    .boximg{
+        width: 90px;
+        height: 90px;
+    }
+    /*shop cards*/
+    .shopcards{
+        height: 75vh;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        margin: auto 30px;
+    }
+    .card:hover{
+        width: 320px;
+        height: 320px;
+    }
+    .cardicon{
+        height: 120px;
+        width: 90px;
+    }
+    .card h2{
+        font-size: 20px;
+    }
+    .card a{
+        grid-area: cardbtn;
+        margin: 15px auto;
+        height: 40px;
+        width: 90px;
+        font-size: 18px;
+    } 
+    /*subscription part*/
+    .subscription{
+        height: 65vh;
+    }
+    #subctitle{
+        margin-top: 10px;
+    }
+    .subscription p {
+        margin-top: 10px;
+        font-size: 18px;
+        width: 450px;
+        line-height: 30px;
+        color: #000;
+    }
+    .subscription a{
+        padding: 5px 25px;
+        font-size: 18px;
+    }
+    /*footer*/
+    .footer{
+        width: 100%;
+        height: 75vh;
+    }
+    .footer .logobox{
+        width: 70px;
+        height: 80px;
+    }
+    .contactus , .address , .sitemap{
+        margin-top: 7%;
+        margin-left: 11%;
+    }
+    .sitemap ul li, a , .contactus a {
+        font-size: 15px;
+        margin: 3% 0;
+    }
+    .footer h3{
+        margin: 0;
+        font-size: 20px;
+    }
+    .address p{
+        font-size: 15px;
+    }
+    .copyright{
+        bottom: 10%;
+    }
+}
+@media screen and (max-width:780px){
+    .footer .logobox{
+        right: 4%;
+    }
+    .logobox {
+        right: 4%;
+    }
+    .footer {
+        height: 65vh;
+    }
+}
+/*Tablets*/
+@media screen and (width:768px){
+    .slidebox {
+        height: 60vh;
+    }
+    .main {
+        height: 60vh;
+    }
+    .shopcards {
+        height: 50vh;
+    }
+    .subscription {
+        height: 40vh;
+    }
+    .footer {
+        height: 45vh;
+    }
+}
+/*Ipad*/
+@media screen and (width:768px) and (height:1024px){
+    .navbar {
+        height: 7vh;
+    }
+    .slidebox {
+        height: 40vh;
+    }
+    .main {
+        height: 45vh;
+    }
+    .shopcards {
+        height: 35vh;
+    }
+    .subscription {
+    height: 30vh;
+    }
+    .footer {
+        height: 35vh;
+    }
+}
+/*Ipad pro*/
+@media screen and (width:1366px) and (height:1024px){
+    .navbar {
+        height: 7vh;
+    }
+    .slidebox {
+        height: 60vh;
+    }
+    .main {
+        height: 55vh;
+    }
+    .shopcards {
+        height: 50vh;
+    }
+    .subscription {
+    height: 40vh;
+    }
+    .footer {
+        height: 45vh;
+    }
+}
+@media screen and (width:1024px) and (height:1366px){
+    .navbar {
+        height: 6vh;
+    }
+    .slidebox {
+        height: 40vh;
+    }
+    .main {
+        height: 40vh;
+    }
+    .shopcards {
+        height: 35vh;
+    }
+    .subscription {
+    height: 30vh;
+    }
+    .footer {
+        height: 35vh;
+    }
+}
+/*mobile*/
