@@ -107,6 +107,10 @@ body{
     background-size: 200%;
     background-repeat: no-repeat;
 }
+/*phone menu*/
+.phone-menu{
+    display: none;
+}
 /*banner slider*/
 .slidebox{
     width: 100%;

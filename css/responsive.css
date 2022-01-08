@@ -281,3 +281,125 @@
     }
 }
 /*mobile*/
+@media screen and (max-width:426px){
+    /*nav bar*/
+    #navmenue , #signupbtn , .endbar{
+        display:none;
+    }
+    .navbar {
+        height: 5vh;
+        right: 0;
+    }
+    .logobox {
+        width: 50px;
+        height: 60px;
+    }
+    /*slider*/
+    .slidebox {
+        width: 100%;
+        height: 30vh;
+    }
+    .slideitem h1 {
+        font-size: 20px;
+    }
+    .slideitem p {
+        font-size: 10px;
+        width: 200px;
+    }
+    .slideitem a {
+        font-size: 10px;
+        padding: 2px 15px;
+    }
+    .dots span {
+        width: 10px;
+        height: 10px;
+    }
+    .dots span:nth-child(1){
+        margin-left: 0px;
+    }
+    .dots span:nth-child(2){
+        margin-left: 8%;
+    }
+    .dots span:nth-child(3){
+        margin-left: 16%;
+    }
+    /*main*/
+    .main {
+        height: 95vh;
+    }
+    .titleof {
+        margin: 0px auto;
+        margin-top: 15px;
+    }
+    .iconbox {
+        width: 35px;
+        height: 35px;
+    }
+    .titleh2 {
+        font-size: 15px;
+    }
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        height: 150px;
+        width: 170px;
+        margin: 16px 20px;
+    }
+    .boximg {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .box h3 {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .box p {
+        font-size: 10px;
+        font-weight: 500;
+    }
+    /*shop cards*/
+    .shopcards {
+        flex-direction: column;
+        height: 95vh;
+    }
+    .card {
+        width: 140px;
+        height: 180px;
+        margin: auto 20px;
+    }
+    .card:hover{
+        width: 160px;
+        height: 200px;
+    }
+    .cardicon {
+        height: 50px;
+        width: 40px;
+    }
+    .card h2 {
+        font-size: 15px;
+        margin: 10px auto;
+    }
+    .card a {
+        margin: auto;
+        height: 25px;
+        width: 55px;
+        font-size: 12px;
+    }
+    /*subscription*/
+    .subscription {
+        height: 35vh;
+    }
+    .subscription p {
+        margin-top: 10px;
+        font-size: 15px;
+        width: 290px;
+        line-height: 20px;
+    }
+    .subscription a {
+        padding: 2px 15px;
+        font-size: 12px;
+    }
+}
