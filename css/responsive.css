@@ -17,7 +17,18 @@
     .dots span:nth-child(3){
         margin-left: 12%;
     }
+    /*main*/
+    .main {
+        height: 85vh;
+    }
+    /*subscription*/
+    .subscription {
+        height: 60vh;
+    }
     /*Footer*/
+    .footer {
+        height: 65vh;
+    }
     .contactus , .address , .sitemap{
         margin-top: 7%;
         margin-left: 11%;
@@ -206,16 +217,16 @@
         height: 60vh;
     }
     .main {
-        height: 60vh;
+        height: 65vh;
     }
     .shopcards {
         height: 50vh;
     }
     .subscription {
-        height: 40vh;
+        height: 45vh;
     }
     .footer {
-        height: 45vh;
+        height: 50vh;
     }
 }
 /*Ipad*/
@@ -293,6 +304,52 @@
     .logobox {
         width: 50px;
         height: 60px;
+    }
+    .togglenav {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        font-size: 20px;
+        color: #000;
+        cursor: pointer;
+    }
+    .phone-menu{
+        display: block;
+        position: fixed;
+        top: 5%;
+        bottom: 0;
+        left: 0;
+        width: 0vh;
+        background-color: rgba(0, 0, 0, 0.808);
+        transition: 0.3s ease-in-out width;
+    }
+    .phone-menu ul {
+        list-style: none;
+        margin-top: 20%;
+        visibility: hidden;
+        overflow: hidden;
+    }
+    .phone-menu ul li , .phone-menu ul li a{
+        text-align: center;
+        text-decoration: none;
+        font-size: 15px;
+        margin: 20px 0;
+    }
+    .phone-menu ul li a{
+        opacity: 0;
+    }
+    .end-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+        visibility: hidden;
+    }
+    .end-nav a{
+        font-size: 18px;
+        text-decoration: none;
+        opacity: 0;
     }
     /*slider*/
     .slidebox {
@@ -401,5 +458,30 @@
     .subscription a {
         padding: 2px 15px;
         font-size: 12px;
+    }
+    /*footer part*/
+    .footer {
+        flex-flow: wrap;
+        justify-content: flex-end;
+    }
+    .footer .logobox {
+        width: 60px;
+        height: 60px;
+    }
+    .footer h3 {
+        font-size: 15px;
+    }
+    .sitemap ul li, a, .contactus a {
+        font-size: 12px;
+    }
+    .address p {
+        font-size: 12px;
+    }
+    .contactus, .sitemap {
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+    .address {
+        margin: -25% 22%;
     }
 }

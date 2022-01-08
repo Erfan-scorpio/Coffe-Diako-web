@@ -108,6 +108,9 @@ body{
     background-repeat: no-repeat;
 }
 /*phone menu*/
+.togglenav {
+    display: none;
+}
 .phone-menu{
     display: none;
 }
