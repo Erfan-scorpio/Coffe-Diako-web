@@ -14,6 +14,7 @@ let doToggleNav = ()=>{
         let arrayLength = mainitems.length
         for(let i=0 ;i < arrayLength ;i++){
             mainitems[i].style.opacity = '1'
+            
         }
 
         toggleStatus = true
